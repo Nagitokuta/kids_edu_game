@@ -1,0 +1,1220 @@
+/* 全体の基本設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Yu Gothic', 'Hiragino Sans', 'Meiryo', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 認証画面のコンテナ */
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 認証カード */
+.auth-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+/* アプリタイトル */
+.app-title {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* フォーム全体 */
+.auth-form {
+  margin-bottom: 25px;
+}
+
+/* フォームグループ */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* ボタン共通スタイル */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 120px;
+}
+
+/* プライマリボタン */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* セカンダリボタン */
+.btn-secondary {
+  background: #f8f9fa;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-secondary:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* 認証切り替えエリア */
+.auth-switch {
+  border-top: 1px solid #e9ecef;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.auth-switch p {
+  color: #6c757d;
+  margin-bottom: 15px;
+  font-size: 0.95em;
+}
+
+/* メッセージエリア */
+.message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+}
+
+.message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: block;
+}
+
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  display: block;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+  
+  .app-title {
+    font-size: 1.5em;
+  }
+  
+  .form-group input {
+    padding: 12px;
+  }
+  
+  .btn {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+}
+
+/* アニメーション効果 */
+.auth-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* フォーカス時のアニメーション */
+.form-group input:focus {
+  animation: inputFocus 0.3s ease-out;
+}
+
+@keyframes inputFocus {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.02);
+  }
+}
+
+.game-select-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.game-select-card {
+  background: white;
+  border-radius: 25px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: slideInUp 0.6s ease-out;
+}
+
+.welcome-title {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.lead-text {
+  color: #666;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* ゲームボタンエリア */
+.game-buttons {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.game-btn {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 154, 158, 0.3);
+}
+
+.game-btn:nth-child(1) {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+.game-btn:nth-child(2) {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.game-btn:nth-child(3) {
+  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+}
+
+.game-number {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  font-weight: bold;
+  margin-right: 15px;
+  font-size: 1.1em;
+}
+
+.game-name {
+  display: block;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
+}
+
+.game-desc {
+  display: block;
+  font-size: 0.9em;
+  color: #555;
+  opacity: 0.8;
+}
+
+/* その他のボタン */
+.other-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 25px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dashboard-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.logout-btn {
+  background: #f8f9fa;
+  color: #dc3545;
+  border: 2px solid #dc3545;
+  border-radius: 12px;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #dc3545;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* アニメーション */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .game-select-card {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+  
+  .welcome-title {
+    font-size: 1.6em;
+  }
+  
+  .lead-text {
+    font-size: 1em;
+  }
+  
+  .game-btn {
+    padding: 15px;
+  }
+  
+  .game-name {
+    font-size: 1.1em;
+  }
+}
+
+/* ホバー時の楽しい効果 */
+.game-btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.dashboard-btn:active,
+.logout-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+/* ゲーム画面共通スタイル */
+
+.game-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.game-card {
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* ゲームヘッダー */
+.game-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+.game-title {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.game-progress {
+  color: #666;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* 問題セクション */
+.question-section {
+  margin-bottom: 30px;
+}
+
+.question-box {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.question-text {
+  color: white;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 回答エリア */
+.answer-area {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* 入力欄（数学ゲーム用） */
+.answer-input {
+  width: 150px;
+  padding: 15px;
+  font-size: 1.3em;
+  text-align: center;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  transition: border-color 0.3s;
+}
+
+.answer-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* 選択肢（言語・科学ゲーム用） */
+.choice-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.choice-btn {
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 12px;
+  padding: 15px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.choice-btn:hover {
+  background: #e9ecef;
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.choice-btn.selected {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+/* アクションセクション */
+.action-section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-outline:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* フィードバック */
+.feedback {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: none;
+}
+
+.feedback.correct {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: block;
+}
+
+.feedback.incorrect {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  display: block;
+}
+
+/* スコアセクション */
+.score-section {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.score-display {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  border: 2px solid #e9ecef;
+}
+
+#score-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #495057;
+}
+
+/* ゲームフッター */
+.game-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .game-card {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .game-title {
+    font-size: 1.6em;
+  }
+  
+  .question-text {
+    font-size: 1.2em;
+  }
+  
+  .answer-input {
+    width: 120px;
+    font-size: 1.1em;
+  }
+  
+  .btn {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+}
+
+/* アニメーション */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 正解・不正解時のアニメーション */
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+}
+
+.feedback.show {
+  animation: bounce 0.6s ease-out;
+}
+
+/* ゲーム結果画面のスタイル */
+
+.result-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.result-card {
+    background: white;
+    border-radius: 25px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: slideInUp 0.6s ease-out;
+}
+
+.result-title {
+    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* ゲーム種別表示 */
+.game-type-display {
+    margin-bottom: 30px;
+}
+
+#game-type-text {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #333;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* スコア表示エリア */
+.score-display {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    border: 2px solid #e9ecef;
+}
+
+.score-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.score-item:last-child {
+    border-bottom: none;
+}
+
+.score-label {
+    font-size: 1.1em;
+    color: #495057;
+    font-weight: bold;
+}
+
+.score-value {
+    font-size: 1.3em;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* 評価メッセージ */
+.evaluation-message {
+    margin: 25px 0;
+    padding: 15px;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    border-radius: 12px;
+}
+
+#evaluation-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* アクションボタン */
+.action-buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    padding: 15px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #333;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 154, 158, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn-outline:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* メッセージエリア */
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: none;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+    .result-card {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    .result-title {
+        font-size: 1.8em;
+    }
+    
+    .score-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
+
+/* アニメーション */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 成績に応じた特別なスタイル */
+.score-excellent {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+}
+
+.score-good {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.score-normal {
+    background: linear-gradient(135deg, #ddd6fe 0%, #e0e7ff 100%);
+}
+/* 新記録達成時の特別なスタイル */
+.result-card.new-record {
+    border: 3px solid #ffd700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    animation: newRecordGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes newRecordGlow {
+    from {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
+    }
+}
+
+.new-record .result-title::after {
+    content: " 🏆";
+    color: #ffd700;
+}
+
+/* ダッシュボード画面のスタイル */
+
+.dashboard-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* ヘッダー */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+.dashboard-title {
+  color: #333;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.user-info {
+  color: #666;
+  font-size: 1.1em;
+}
+
+/* 総合成績サマリー */
+.summary-section {
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+}
+
+.summary-card h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.summary-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ゲーム別成績 */
+.games-section {
+  margin-bottom: 30px;
+}
+
+.games-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.game-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.game-card[data-game="math"] {
+  border-color: #ff9a9e;
+}
+
+.game-card[data-game="language"] {
+  border-color: #a8edea;
+}
+
+.game-card[data-game="science"] {
+  border-color: #d299c2;
+}
+
+.game-icon {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.game-name {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.game-score {
+  margin-bottom: 15px;
+}
+
+.score-label {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.score-value {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* プログレスバー */
+.game-progress {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  width: 0%;
+}
+
+.play-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* ランキング */
+.ranking-section {
+  margin-bottom: 30px;
+}
+
+.ranking-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.ranking-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.tab-btn {
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.tab-btn:hover:not(.active) {
+  background: #e9ecef;
+}
+
+.ranking-content {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 150px;
+}
+
+.ranking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.ranking-item:last-child {
+  border-bottom: none;
+}
+
+.ranking-position {
+  font-weight: bold;
+  color: #667eea;
+  min-width: 30px;
+}
+
+.ranking-username {
+  flex: 1;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.ranking-score {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* フッター */
+.dashboard-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .dashboard-card {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .dashboard-title {
+    font-size: 1.8em;
+  }
+  
+  .summary-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ranking-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .dashboard-footer {
+    flex-direction: column;
+  }
+}
+
+/* 特別な表示 */
+.no-data {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+}
+
+.current-user-highlight {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+}

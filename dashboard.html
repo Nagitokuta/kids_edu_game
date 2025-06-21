@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成績ダッシュボード - 子供向け教育ゲームアプリ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-card">
+      <!-- ヘッダー -->
+      <header class="dashboard-header">
+        <h1 class="dashboard-title">成績ダッシュボード</h1>
+        <div class="user-info">
+          <span id="current-user-name">ユーザー名</span>さんの成績
+        </div>
+      </header>
+
+      <!-- 総合成績サマリー -->
+      <section class="summary-section">
+        <div class="summary-card">
+          <h2>総合成績</h2>
+          <div class="summary-stats">
+            <div class="stat-item">
+              <span class="stat-label">総合得点</span>
+              <span id="total-score" class="stat-value">0点</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">平均得点</span>
+              <span id="average-score" class="stat-value">0点</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">得意分野</span>
+              <span id="best-subject" class="stat-value">-</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ゲーム別成績 -->
+      <section class="games-section">
+        <h2>ゲーム別成績</h2>
+        <div class="games-grid">
+          <!-- 数学ゲーム -->
+          <div class="game-card" data-game="math">
+            <div class="game-icon">🔢</div>
+            <h3 class="game-name">数学ゲーム</h3>
+            <div class="game-score">
+              <span class="score-label">最高得点</span>
+              <span id="math-score" class="score-value">0点</span>
+            </div>
+            <div class="game-progress">
+              <div class="progress-bar">
+                <div id="math-progress" class="progress-fill"></div>
+              </div>
+            </div>
+            <button class="play-btn" onclick="playGame('math')">プレイ</button>
+          </div>
+
+          <!-- 言語ゲーム -->
+          <div class="game-card" data-game="language">
+            <div class="game-icon">📚</div>
+            <h3 class="game-name">言語ゲーム</h3>
+            <div class="game-score">
+              <span class="score-label">最高得点</span>
+              <span id="language-score" class="score-value">0点</span>
+            </div>
+            <div class="game-progress">
+              <div class="progress-bar">
+                <div id="language-progress" class="progress-fill"></div>
+              </div>
+            </div>
+            <button class="play-btn" onclick="playGame('language')">プレイ</button>
+          </div>
+
+          <!-- 科学クイズ -->
+          <div class="game-card" data-game="science">
+            <div class="game-icon">🔬</div>
+            <h3 class="game-name">科学クイズ</h3>
+            <div class="game-score">
+              <span class="score-label">最高得点</span>
+              <span id="science-score" class="score-value">0点</span>
+            </div>
+            <div class="game-progress">
+              <div class="progress-bar">
+                <div id="science-progress" class="progress-fill"></div>
+              </div>
+            </div>
+            <button class="play-btn" onclick="playGame('science')">プレイ</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ランキング -->
+      <section class="ranking-section">
+        <h2>ランキング</h2>
+        <div class="ranking-tabs">
+          <button class="tab-btn active" onclick="showRanking('total')">総合</button>
+          <button class="tab-btn" onclick="showRanking('math')">数学</button>
+          <button class="tab-btn" onclick="showRanking('language')">言語</button>
+          <button class="tab-btn" onclick="showRanking('science')">科学</button>
+        </div>
+        <div id="ranking-content" class="ranking-content">
+          <!-- ランキングデータがここに表示される -->
+        </div>
+      </section>
+
+      <!-- アクションボタン -->
+      <footer class="dashboard-footer">
+        <button id="game-select-btn" class="btn btn-primary">
+          🎮 ゲーム選択に戻る
+        </button>
+        <button id="reset-scores-btn" class="btn btn-outline">
+          🔄 成績をリセット
+        </button>
+        <button id="logout-btn" class="btn btn-secondary">
+          🚪 ログアウト
+        </button>
+      </footer>
+
+      <!-- メッセージ表示エリア -->
+      <div id="message" class="message"></div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/score-manager.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

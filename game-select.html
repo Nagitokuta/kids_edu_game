@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ゲーム選択 - 子供向け教育ゲームアプリ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="game-select-container">
+    <div class="game-select-card">
+      <!-- ユーザー名表示 -->
+      <h1 id="welcome-message" class="welcome-title">ようこそ、〇〇さん！</h1>
+      <p class="lead-text">プレイするゲームを選んでね！</p>
+      
+      <!-- ゲーム選択ボタン -->
+      <div class="game-buttons">
+        <button class="game-btn" id="math-game-btn" data-game="math">
+          <span class="game-number">1</span>
+          <span class="game-name">数学ゲーム</span>
+          <span class="game-desc">計算問題にチャレンジ！</span>
+        </button>
+        <button class="game-btn" id="language-game-btn" data-game="language">
+          <span class="game-number">2</span>
+          <span class="game-name">言語ゲーム</span>
+          <span class="game-desc">英単語を覚えよう！</span>
+        </button>
+        <button class="game-btn" id="science-quiz-btn" data-game="science">
+          <span class="game-number">3</span>
+          <span class="game-name">科学クイズ</span>
+          <span class="game-desc">科学の知識を試そう！</span>
+        </button>
+      </div>
+      
+      <!-- その他のボタン -->
+      <div class="other-buttons">
+        <button class="dashboard-btn" id="dashboard-btn">
+          📊 成績ダッシュボード
+        </button>
+        <button class="logout-btn" id="logout-btn">
+          🚪 ログアウト
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/auth.js"></script>
+  <script src="js/game-select.js"></script>
+</body>
+</html>

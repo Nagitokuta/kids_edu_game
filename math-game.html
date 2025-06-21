@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数学ゲーム - 子供向け教育ゲームアプリ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="game-card">
+      <!-- ゲームヘッダー -->
+      <header class="game-header">
+        <h1 id="game-title" class="game-title">数学ゲーム</h1>
+        <div class="game-progress">
+          <span id="current-question">1</span> / <span id="total-questions">5</span>
+        </div>
+      </header>
+
+      <!-- 問題エリア -->
+      <section class="question-section">
+        <div class="question-box">
+          <p id="question-text" class="question-text">問題を準備中...</p>
+        </div>
+        
+        <!-- 回答エリア -->
+        <div id="answer-area" class="answer-area">
+          <!-- JavaScriptで動的に入力欄を作成 -->
+        </div>
+      </section>
+
+      <!-- アクションボタン -->
+      <section class="action-section">
+        <button id="submit-btn" class="btn btn-primary">回答する</button>
+        <div id="feedback" class="feedback"></div>
+      </section>
+
+      <!-- スコア表示 -->
+      <section class="score-section">
+        <div class="score-display">
+          <span id="score-text">スコア: 0問中0問正解</span>
+        </div>
+      </section>
+
+      <!-- ゲーム終了ボタン -->
+      <footer class="game-footer">
+        <button id="end-btn" class="btn btn-secondary">ゲーム終了</button>
+        <button id="back-btn" class="btn btn-outline">ゲーム選択に戻る</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/game-common.js"></script>
+  <script src="js/math-game.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゲーム結果 - 子供向け教育ゲームアプリ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="result-container">
+        <div class="result-card">
+            <h1 class="result-title">ゲーム結果</h1>
+            
+            <!-- ゲーム種別表示 -->
+            <div class="game-type-display">
+                <span id="game-type-text">数学ゲーム</span>
+            </div>
+            
+            <!-- スコア表示エリア -->
+            <div class="score-display">
+                <div class="score-item">
+                    <span class="score-label">正解数</span>
+                    <span id="correct-answers" class="score-value">3問/5問</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">スコア</span>
+                    <span id="final-score" class="score-value">60点</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">正答率</span>
+                    <span id="accuracy-rate" class="score-value">60%</span>
+                </div>
+            </div>
+            
+            <!-- 評価メッセージ -->
+            <div class="evaluation-message">
+                <p id="evaluation-text">よくできました！</p>
+            </div>
+            
+            <!-- アクションボタン -->
+            <div class="action-buttons">
+                <button id="dashboard-btn" class="btn btn-primary">
+                    📊 ダッシュボードへ戻る
+                </button>
+                <button id="play-again-btn" class="btn btn-secondary">
+                    🎮 続けてプレイ
+                </button>
+                <button id="game-select-btn" class="btn btn-outline">
+                    🏠 ゲーム選択に戻る
+                </button>
+            </div>
+            
+            <!-- メッセージ表示エリア -->
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/game-result.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新規登録 - 子供向け教育ゲームアプリ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <h1 class="app-title">新規登録</h1>
+      <form class="auth-form" id="registerForm">
+        <div class="form-group">
+          <label for="reg-username">ユーザー名 :</label>
+          <input type="text" id="reg-username" name="username" required autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label for="reg-password">パスワード :</label>
+          <input type="password" id="reg-password" name="password" required autocomplete="new-password">
+        </div>
+        <div class="form-group">
+          <label for="reg-password-confirm">パスワード再入力 :</label>
+          <input type="password" id="reg-password-confirm" name="password-confirm" required autocomplete="new-password">
+        </div>
+        <button type="submit" class="btn btn-primary">登録する</button>
+      </form>
+      <div class="auth-switch">
+        <a href="index.html" class="btn btn-secondary">ログイン画面に戻る</a>
+      </div>
+      <div id="message" class="message"></div>
+    </div>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>
